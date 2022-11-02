@@ -452,6 +452,8 @@ function cpuPlaceBoat1 () {
     }
 }
 function isAttackingTwice (boomSpriteArrayPX: Sprite[]) {
+    grid.place(shadowCursor, tiles.getTileLocation(-10, -10))
+    boomSpriteArrayPX[0] = shadowCursor
     for (let currentBoomSprite of boomSpriteArrayPX) {
         if (grid.spriteCol(currentBoomSprite) == grid.spriteCol(cursor) && grid.spriteRow(currentBoomSprite) == grid.spriteRow(cursor)) {
             return 1
